@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Confirmação — VoxMed</title>
+<style>
+  :root {
+    --primary: #0F6E8C;
+    --background: #F4F8F9;
+    --surface: #FFFFFF;
+    --text: #16262D;
+    --text-secondary: #5C7480;
+    --border: #DCE6E9;
+    --danger: #D64550;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: 24px;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 48px 32px;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+  }
+  .check {
+    width: 64px;
+    height: 64px;
+    border-radius: 999px;
+    background: var(--primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin: 0 auto 24px;
+  }
+  .check.error { background: var(--danger); }
+  h1 {
+    font-size: 22px;
+    margin: 0 0 12px;
+  }
+  p {
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0 0 8px;
+  }
+  .brand {
+    margin-top: 32px;
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+  .brand b { color: var(--primary); }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="check" id="check">✓</div>
+    <h1 id="title">Cadastro confirmado!</h1>
+    <p id="message">Seu e-mail foi verificado com sucesso. Pode fechar esta página e voltar para o app VoxMed para fazer login.</p>
+    <div class="brand"><b>VoxMed</b> · Documentação clínica por voz</div>
+  </div>
+
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.hash.replace(/^#/, ''));
+      var error = params.get('error') || params.get('error_code');
+      var errorDescription = params.get('error_description');
+      var type = params.get('type');
+
+      var check = document.getElementById('check');
+      var title = document.getElementById('title');
+      var message = document.getElementById('message');
+
+      if (error) {
+        check.className = 'check error';
+        check.textContent = '!';
+        title.textContent = 'Não foi possível confirmar';
+        message.textContent = errorDescription
+          ? decodeURIComponent(errorDescription.replace(/\+/g, ' '))
+          : 'O link pode ter expirado ou já ter sido usado. Volte ao app e solicite um novo e-mail.';
+      } else if (type === 'recovery') {
+        title.textContent = 'Senha redefinida!';
+        message.textContent = 'Volte para o app VoxMed e faça login com sua nova senha.';
+      } else if (!params.get('access_token')) {
+        check.className = 'check error';
+        check.textContent = '!';
+        title.textContent = 'Link inválido';
+        message.textContent = 'Não encontramos as informações de confirmação nesse link. Volte ao app e tente novamente.';
+      }
+
+      if (window.history && window.history.replaceState) {
+        window.history.replaceState(null, '', window.location.pathname);
+      }
+    })();
+  </script>
+</body>
+</html>
