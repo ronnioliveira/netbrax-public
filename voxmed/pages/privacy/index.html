@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade — VoxMed</title>
+<style>
+  :root {
+    --primary: #0F6E8C;
+    --primary-light: #E4EEF1;
+    --background: #F4F8F9;
+    --surface: #FFFFFF;
+    --text: #16262D;
+    --text-secondary: #5C7480;
+    --border: #DCE6E9;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .badge {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    background: var(--primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  h1 {
+    font-size: 26px;
+    margin: 0;
+  }
+  .updated {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin: 4px 0 32px 52px;
+  }
+  h2 {
+    font-size: 18px;
+    color: var(--primary);
+    margin-top: 40px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+  }
+  h3 {
+    font-size: 15px;
+    margin-top: 24px;
+  }
+  p, li { color: var(--text); font-size: 15px; }
+  ul { padding-left: 20px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+  }
+  th { background: var(--primary-light); color: var(--primary); }
+  a { color: var(--primary); }
+  strong { color: var(--text); }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    margin-top: 24px;
+  }
+  .notice {
+    background: var(--primary-light);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-top: 16px;
+    font-size: 14px;
+  }
+  footer {
+    margin-top: 48px;
+    color: var(--text-secondary);
+    font-size: 13px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="badge">V</div>
+    <h1>Política de Privacidade</h1>
+  </header>
+  <div class="updated">VoxMed · Última atualização: 26 de agosto de 2026</div>
+
+  <div class="card">
+    <p>Esta Política de Privacidade descreve como o <strong>VoxMed</strong> ("nós", "aplicativo") coleta, usa, compartilha e protege as informações dos usuários ("você"), em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).</p>
+    <p>Ao criar uma conta ou usar o VoxMed, você concorda com os termos desta política.</p>
+
+    <h2>1. Quem somos</h2>
+    <p>O VoxMed é um aplicativo voltado a profissionais de fisioterapia, que transcreve consultas por voz e organiza os dados em prontuários e fichas de avaliação clínica.</p>
+    <p><strong>Controlador dos dados de conta:</strong> VoxMed<br>
+    <strong>Contato:</strong> <a href="mailto:ronni.carlo.oliveira@gmail.com">ronni.carlo.oliveira@gmail.com</a></p>
+
+    <h2>2. Um ponto importante: dados de conta vs. dados de pacientes</h2>
+    <p>O VoxMed lida com dois tipos bem diferentes de dado pessoal, e é importante distinguir:</p>
+    <ul>
+      <li><strong>Dados da sua conta</strong> (nome, e-mail, senha) — aqui o VoxMed é o controlador, nos termos da LGPD.</li>
+      <li><strong>Dados dos seus pacientes</strong> (inseridos por você nos prontuários/fichas, a partir de consultas gravadas) — aqui <strong>você, profissional</strong>, é o controlador desses dados, e o VoxMed atua como operador (um sistema que processa e armazena esses dados por sua instrução, seguindo os padrões de segurança desta política). Cabe a você garantir que tem base legal e, quando aplicável, o consentimento do paciente para registrar essas informações no aplicativo.</li>
+    </ul>
+
+    <h2>3. Quais dados coletamos</h2>
+
+    <h3>3.1 Dados de conta</h3>
+    <ul>
+      <li>Nome completo</li>
+      <li>E-mail</li>
+      <li>Senha (armazenada de forma criptografada pelo nosso provedor de autenticação — nunca temos acesso à sua senha em texto simples)</li>
+    </ul>
+
+    <h3>3.2 Áudio e transcrição</h3>
+    <p>O áudio da consulta é processado <strong>no próprio aparelho</strong>, usando o reconhecimento de fala nativo do sistema operacional (iOS/Android) — o áudio bruto <strong>não é enviado a servidores nem armazenado</strong>. Só o texto resultante da transcrição é salvo em nosso banco de dados.</p>
+
+    <h3>3.3 Dados de prontuários e fichas de avaliação</h3>
+    <p>A partir da transcrição, o VoxMed extrai e organiza dados de identificação e histórico clínico relatados pelo paciente durante a consulta (nome, idade, queixas, histórico de saúde, entre outros, dependendo do tipo de ficha). Campos de avaliação clínica (exame físico, diagnóstico, prognóstico, plano terapêutico) são sempre preenchidos manualmente pelo profissional — nunca inferidos automaticamente.</p>
+
+    <h3>3.4 Dados que <strong>não</strong> coletamos</h3>
+    <p>Não coletamos sua localização em tempo real (GPS), nem dados de pagamento (o app não processa cobranças).</p>
+
+    <h2>4. Como usamos seus dados</h2>
+    <ul>
+      <li>Criar e autenticar sua conta</li>
+      <li>Transcrever suas gravações e preencher automaticamente os campos de identificação/histórico dos prontuários</li>
+      <li>Gerar o PDF do prontuário/ficha e enviá-lo por e-mail para você mesmo, profissional responsável</li>
+      <li>Manter o histórico de gravações e prontuários da sua conta</li>
+      <li>Melhorar a segurança e o funcionamento do app</li>
+    </ul>
+    <p>Não usamos seus dados (nem os dos seus pacientes) para publicidade de terceiros, não os vendemos, e não os usamos para treinar modelos de inteligência artificial de terceiros.</p>
+
+    <h2>5. Com quem compartilhamos dados</h2>
+    <p>Usamos os seguintes prestadores de serviço (operadores, nos termos da LGPD) para viabilizar o app:</p>
+    <table>
+      <tr><th>Serviço</th><th>Finalidade</th></tr>
+      <tr><td>Supabase</td><td>Banco de dados, autenticação e hospedagem do backend (armazena contas, transcrições e prontuários)</td></tr>
+      <tr><td>Anthropic (API Claude)</td><td>Extrai automaticamente os campos de identificação/histórico da transcrição, e monta o PDF do prontuário. Recebe o texto da transcrição para processamento — não armazena esses dados após responder à solicitação, além do necessário pra prevenção de abuso, conforme a política de uso da Anthropic</td></tr>
+      <tr><td>Resend</td><td>Envio do e-mail com o PDF do prontuário para o próprio profissional</td></tr>
+    </table>
+    <p>Não compartilhamos seus dados ou os de seus pacientes com terceiros para fins de marketing. Seus dados de conta (nome, e-mail) nunca são exibidos a outros usuários — o VoxMed não tem funcionalidades sociais ou de compartilhamento entre contas.</p>
+
+    <h2>6. Seus direitos (LGPD)</h2>
+    <p>Você pode, a qualquer momento:</p>
+    <ul>
+      <li>Acessar, revisar e corrigir os prontuários/fichas diretamente no app, antes de aprová-los e enviá-los</li>
+      <li>Excluir gravações e prontuários pelo próprio app</li>
+      <li>Solicitar a exclusão da sua conta e dos dados associados</li>
+      <li>Solicitar uma cópia dos seus dados</li>
+    </ul>
+    <p>Para exercer esses direitos, entre em contato pelo e-mail <a href="mailto:ronni.carlo.oliveira@gmail.com">ronni.carlo.oliveira@gmail.com</a>.</p>
+
+    <h2>7. Exclusão de conta e retenção de dados</h2>
+    <p>Gravações e prontuários podem ser excluídos individualmente a qualquer momento pelo app. Ao solicitar a exclusão da sua conta, seus dados de perfil, gravações e prontuários serão removidos dos nossos sistemas, exceto quando a retenção for exigida por obrigação legal.</p>
+
+    <h2>8. Segurança</h2>
+    <p>Adotamos medidas técnicas para proteger seus dados: comunicação criptografada (HTTPS) entre o app e nossos servidores, autenticação segura, e controle de acesso a nível de linha no banco de dados (Row Level Security) — cada profissional só consegue acessar suas próprias gravações e prontuários, nunca os de outra conta.</p>
+
+    <h2>9. Uso por menores de idade</h2>
+    <p>O VoxMed é uma ferramenta profissional, não é direcionada a menores de 18 anos, e não coletamos intencionalmente dados de contas de crianças. Isso não impede o registro de dados de pacientes menores de idade pelo profissional responsável, dentro do exercício da sua atividade clínica.</p>
+
+    <h2>10. Alterações nesta política</h2>
+    <p>Podemos atualizar esta Política de Privacidade periodicamente. Alterações relevantes serão comunicadas dentro do app.</p>
+
+    <h2>11. Contato</h2>
+    <p>Dúvidas sobre esta política ou sobre o tratamento dos seus dados: <a href="mailto:ronni.carlo.oliveira@gmail.com">ronni.carlo.oliveira@gmail.com</a></p>
+
+    <div class="notice">Este documento é um modelo geral e não substitui aconselhamento jurídico. Recomenda-se revisão por um profissional de direito antes da publicação definitiva, especialmente por lidar com dados de saúde.</div>
+  </div>
+
+  <footer>VoxMed — Documentação clínica por voz</footer>
+</div>
+</body>
+</html>
